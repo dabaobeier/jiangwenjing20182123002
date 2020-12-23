@@ -1,25 +1,72 @@
-### 用例名称：Download Code 
-### 用例说明：管理员和User可以下载Github中的code
-### 参与者：管理员，User
-### 元素：Open with Desktop,Download ZIP
-### 关系：管理员和User对于Download Code用例是关联关系；Download Code对于Open with Desktop 和Download ZIP 是扩展（extend）关系
-### 建模思路
-1.	在管理员和User登录Github后，可以对其进行搜索的内容进行Download Code（下载）功能的操作。
-2.	在Download Code的功能下，管理员和User均有两种选择。一个是Open with Desktop，另外一个是Download ZIP。所以Open with Desktop和Download ZIP均是Download Code的扩展（extend）关系
+# jiangwenjing20182123002
+5.什么是依赖？它与关联有什么区别？
+答：依赖是一种使用关系，它说明了一个事物声明说明的变化可能影响到使用它的另一个事物，但反之未必。也就是说，服务的使用者以某种方式依赖于服务的提供者。而关联是一种结构关系，它详述了一个事物的对象与另一个事物的对象相互联系。
 
-### 用例名称	User Enter File
-### 用例说明	
-User可以对文件进行查看和修改；
-User修改时要向管理员提出修改申请；
-管理员接受User的申请并对其进行审核
-### 参与者	User，管理员
-### 元素	Find File ,Enter File ,Change Flie ,User requests ,User questions
-### 关系	
-User对于Enter File是关联关系；
-管理员对于Change File是关联关系；
-Change File对于Enter File是泛化关系；
-Find File 对于Enter File是包含关系；
-User requests和User questions对于Change File均是包含关系。
-### 建模思路	
-1.	在User登录Github后，可以进入搜索界面进行搜索（Find File），查看文件等操作；
-2.	除了搜索查看等操作，User还可根据用户提出的要求（User requests）和问题(User questions)对文件进行修改。但是作为用户进行修改操作时，必须要向管理员提出申请，得到管理员的同意之后才可以对其进行修改。
+6.什么是泛化？泛化是否就是类的继承，如果不是请说明理由。
+答：泛化是一般事物(称为父类或超类)和较特殊事物(称为子类或孩子类)之间的关系。泛化不是类的继承，类的继承是泛化的一种。
+
+（2）
+2.学期筛选类：
+属性	    全部数据	                  18至20学年所有成绩
+	      18至19学年上学期      	显示该学期内的所有成绩，类型为String，Private属性
+	      18至19学年下学期	      显示该学期内的所有成绩，类型为String，Private属性
+	      19至20学年上学期	      显示该学期内的所有成绩，类型为String，Private属性
+	      19至20学年下学期      	显示该学期内的所有成绩，类型为String，Private属性
+
+方法	      查询	              查询在该学期内的所有成绩信息
+	          打印               	打印该学期内的所有成绩信息
+            
+成绩下载类：
+属性	    姓名	                类型为String，Private属性
+	        学号	                类型为int，Private属性
+	        学院	                类型为String，Private属性
+         	班级	                类型为String，Private属性
+	        学期	                成绩所属学期，类型为String，Private属性
+	        课程名称	            类型为String，Private属性
+	        课程性质	            类型为String，Private属性
+	        成绩类型	            成绩类型为期末总评，类型为String，Private属性
+	        应修学分	            该课程应修学分，类型为String，Private属性
+	        实修学分	            该课程实际所修学分，类型为String，Private属性
+	        成绩	                该课程的成绩，类型为String，Private属性
+	        绩点	                该课程成绩绩点，类型为String，Private属性
+	        学分绩	               该课程学分绩，类型为String，Private属性
+方法	    保存	                保存所有成绩
+	        发送	                发送成绩表
+成绩下载类：
+属性	    姓名	                类型为String，Private属性
+	        学号	                类型为int，Private属性
+	        学院	                类型为String，Private属性
+	        班级	                类型为String，Private属性
+	        学期	                成绩所属学期，类型为String，Private属性
+	        课程名                类型为String，Private属性
+	        课程性质	            类型为String，Private属性
+	        成绩类型	            成绩类型为期末总评，类型为String，Private属性
+	        应修学分	            该课程应修学分，类型为String，Private属性
+	        实修学分	            该课程实际所修学分，类型为String，Private属性
+	        成绩	                该课程的成绩，类型为String，Private属性
+	        绩点	                该课程成绩绩点，类型为String，Private属性
+	        学分绩	               该课程学分绩，类型为String，Private属性
+方法	    保存	                保存所有成绩
+	        发送	                发送成绩表
+
+成绩类
+属性	    考试科目	             类型为String，Private属性
+		      总评成绩	             类型为String，Private属性
+			    总评成绩	             类型为String，Private属性
+			    学期	                 类型为String，Private属性
+			    学科类型	             类型为String，Private属性
+			    应修学分	             类型为String，Private属性
+			    实修学分	             类型为String，Private属性
+			    绩点	                 类型为String，Private属性
+			    学分绩	                类型为String，Private属性
+			    平时成绩	             类型为Int，Private属性
+			    作业成绩	             类型为Int，Private属性
+			     期中成绩	             类型为Int，Private属性
+			     期末成绩	             类型为Int，Private属性
+3.类之间分别有什么关系
+成绩类和成绩下载类是依赖关系，成绩下载类和学期筛选类是普通关联，学期筛选类和成绩类是依赖关系。
+
+
+
+
+
